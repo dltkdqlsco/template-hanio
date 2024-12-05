@@ -83,7 +83,7 @@ class MyList : public MyContainer<T>{
             return count;
         }
 
-        int &back(){
+        T &back(){
             if(!head){
                 throw out_of_range("list is empty");
             }
@@ -95,7 +95,7 @@ class MyList : public MyContainer<T>{
             return temp->data;
         }
 
-        const int &back() const{
+        const T &back() const{
             if(!head){
                 throw out_of_range("list is empty");
             }

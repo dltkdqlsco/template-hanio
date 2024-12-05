@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//template<typename T>
+template<typename T>
 class MyVector : public MyContainer<T>{
     public:
         MyVector() : canSaveNum{0}, pCanSaveNum{new T[canSaveNum]}, currentNum{0}{}
