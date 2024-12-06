@@ -25,11 +25,11 @@ class MyStack : public MyContainer<T>{
             return container->size() == 0;
         }
 
-        void push_back(const T &val) override{
+        void push(const T &val){
             container->push_back(val);
         }
 
-        void pop_back() override{
+        void pop(){
             if(!empty()){
                 container->pop_back();
             }else{

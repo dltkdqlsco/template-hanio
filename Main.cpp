@@ -42,6 +42,8 @@ int main() {
     int numDisks;
 
     cin >> containerType;
+
+    cout << "Enter the number of disks: ";
     cin >> numDisks;
 
     if (containerType == "vector") {
