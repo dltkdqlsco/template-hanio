@@ -1,4 +1,4 @@
-#pragma
+#pragma once
 #include <iostream>
 #include "MyContainer.h"
 
@@ -7,7 +7,7 @@ using namespace std;
 template<typename T>
 class MyVector : public MyContainer<T>{
     public:
-        MyVector() : canSaveNum{0}, pCanSaveNum{new T[canSaveNum]}, currentNum{0}{}
+        MyVector() : canSaveNum{1}, pCanSaveNum{new T[canSaveNum]}, currentNum{0}{}
 
         ~MyVector(){
             delete[] pCanSaveNum;
@@ -31,7 +31,7 @@ class MyVector : public MyContainer<T>{
             if(currentNum == 0){
                 cout << "not have num in the any index" << endl;
             }else{
-                pCanSaveNum[--currentNum] = 0;
+                --currentNum;
             }
         }
 

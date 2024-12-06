@@ -12,16 +12,13 @@ class MyContainer{
         virtual int size() const = 0;
         virtual ~MyContainer() = default;
 
-        static MyContainer<T> *Create(MyContainer<T> *type){
-            MyList<T> *which = dynamic_cast<MyList<T> *>(type);
-            if(which){
+        static MyContainer<T> *Create(MyContainer<T> *type) {
+            if (dynamic_cast<MyList<T> *>(type)) {
                 return new MyList<T>();
-                
-            }else if(which == nullptr){
+            }else if (dynamic_cast<MyVector<T> *>(type)) {
                 return new MyVector<T>();
-                
+            }else {
+                return new MyVector<T>();
             }
-            
-            return nullptr;
         }
 };
